@@ -1,0 +1,5 @@
+/home/vladislav/Projects/CPP/MuzTorgZ/cmake-build-debug/CMakeFiles/MuzTorgZ.dir
+/home/vladislav/Projects/CPP/MuzTorgZ/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/vladislav/Projects/CPP/MuzTorgZ/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/vladislav/Projects/CPP/MuzTorgZ/cmake-build-debug/CMakeFiles/MuzTorgZ_autogen_timestamp_deps.dir
+/home/vladislav/Projects/CPP/MuzTorgZ/cmake-build-debug/CMakeFiles/MuzTorgZ_autogen.dir
