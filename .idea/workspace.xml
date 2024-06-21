@@ -21,8 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea15386e-f23c-4466-b4e7-4923310b2773" name="Changes" comment="upd">
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +44,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/cpprun/MuzTorgZ.git",
-    "accountId": "16253eb1-2d5d-48e7-8e1b-a083051fb829"
+    "accountId": "7546a9b1-dfdb-424b-9a8f-8ef8b21b9688"
   }
 }]]></component>
   <component name="HighlightingSettingsPerFile">
@@ -114,7 +113,7 @@
       <updated>1718981264880</updated>
       <workItem from="1718981267296" duration="2202000" />
       <workItem from="1718984199100" duration="9511000" />
-      <workItem from="1718997308899" duration="723000" />
+      <workItem from="1718997308899" duration="1406000" />
     </task>
     <task id="LOCAL-00001" summary="upd">
       <option name="closed" value="true" />
