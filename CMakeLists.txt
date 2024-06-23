@@ -31,9 +31,12 @@ add_executable(MuzTorgZ main.cpp
         Windows/dbwindow.cpp
         Windows/dbwindow.h
         Windows/dbwindow.ui
-        Dialogs/regdialog.cpp
-        Dialogs/regdialog.h
-        Dialogs/regdialog.ui
+        Dialogs/AuthorizationDialogs/regdialog.cpp
+        Dialogs/AuthorizationDialogs/regdialog.h
+        Dialogs/AuthorizationDialogs/regdialog.ui
+        Dialogs/UsersTableDialogs/createuserdialog.cpp
+        Dialogs/UsersTableDialogs/createuserdialog.h
+        Dialogs/UsersTableDialogs/createuserdialog.ui
 )
 
 

@@ -19,7 +19,9 @@ public:
     static void connectToDatabase();
     static void closeDatabase();
 
-    static void authorizeUser(QString& login);
+    static void authorizeUser(const QString& login);
+
+    static void regUser(const QString& login, const QString& password, const QString& email, Roles role, const QString& salt);
 
     static QSqlQueryModel* getTablesName();
 

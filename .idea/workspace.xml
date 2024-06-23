@@ -21,7 +21,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea15386e-f23c-4466-b4e7-4923310b2773" name="Changes" comment="upd">
+      <change afterPath="$PROJECT_DIR$/Dialogs/AuthorizationDialogs/regdialog.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dialogs/UsersTableDialogs/createuserdialog.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dialogs/UsersTableDialogs/createuserdialog.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dialogs/UsersTableDialogs/createuserdialog.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/dbmanager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Database/dbmanager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/dbmanager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Database/dbmanager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dialogs/regdialog.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dialogs/regdialog.h" beforeDir="false" afterPath="$PROJECT_DIR$/Dialogs/AuthorizationDialogs/regdialog.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dialogs/regdialog.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Dialogs/AuthorizationDialogs/regdialog.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/MuzMsgBox.h" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/MuzMsgBox.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Windows/authorizationwin.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Windows/authorizationwin.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Windows/authorizationwin.h" beforeDir="false" afterPath="$PROJECT_DIR$/Windows/authorizationwin.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Windows/dbwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Windows/dbwindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Windows/dbwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/Windows/dbwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Windows/dbwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Windows/dbwindow.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-695163bf78e27b3c25b8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-06-21T18-19-09-0189.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-MuzTorgZ-Debug-635269aece876d87f8b4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/Database/dbmanager.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/Database/dbmanager.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/Dialogs/regdialog.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/Dialogs/regdialog.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/MuzTorgZ_autogen/mocs_compilation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/MuzTorgZ_autogen/mocs_compilation.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/Windows/authorizationwin.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/Windows/authorizationwin.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/Windows/dbwindow.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/Windows/dbwindow.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ_autogen.dir/AutogenInfo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ_autogen.dir/ParseCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ_autogen.dir/ParseCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/d/6b3c4ae86290a95a140e53bcb311e092a166e15438c8cdfd5d2c2e60a7157219.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/d/6b3c4ae86290a95a140e53bcb311e092a166e15438c8cdfd5d2c2e60a7157219.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ_autogen/FWBHRVYHPF/moc_dbwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ_autogen/FWBHRVYHPF/moc_dbwindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ_autogen/deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ_autogen/deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ_autogen/include/ui_dbwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ_autogen/include/ui_dbwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ_autogen/mocs_compilation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,20 +73,43 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "cpprun"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;cpprun&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/cpprun/MuzTorgZ.git",
-    "accountId": "7546a9b1-dfdb-424b-9a8f-8ef8b21b9688"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/cpprun/MuzTorgZ.git&quot;,
+    &quot;accountId&quot;: &quot;7546a9b1-dfdb-424b-9a8f-8ef8b21b9688&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dialogs/AuthorizationDialogs/regdialog.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Windows/authorizationwin.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlrelationaltablemodel.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -90,6 +151,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Dialogs/AuthorizationDialogs" />
       <recent name="$PROJECT_DIR$/Windows" />
       <recent name="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ_autogen/include" />
       <recent name="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ_autogen/include/WindowsUI" />
@@ -98,6 +160,11 @@
   </component>
   <component name="RunManager">
     <configuration name="MuzTorgZ" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MuzTorgZ" TARGET_NAME="MuzTorgZ" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MuzTorgZ" RUN_TARGET_NAME="MuzTorgZ">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -113,7 +180,9 @@
       <updated>1718981264880</updated>
       <workItem from="1718981267296" duration="2202000" />
       <workItem from="1718984199100" duration="9511000" />
-      <workItem from="1718997308899" duration="1406000" />
+      <workItem from="1718997308899" duration="1824000" />
+      <workItem from="1719009457025" duration="13534000" />
+      <workItem from="1719090735341" duration="6480000" />
     </task>
     <task id="LOCAL-00001" summary="upd">
       <option name="closed" value="true" />
@@ -123,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718997817420</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="upd">
+      <option name="closed" value="true" />
+      <created>1718998719074</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718998719074</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

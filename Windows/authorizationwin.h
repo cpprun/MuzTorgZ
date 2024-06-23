@@ -8,7 +8,10 @@
 #include <QMainWindow>
 #include <iostream>
 #include <QString>
+
+#include "dbwindow.h"
 #include "../Models/CurrentUser.h"
+#include "AuthorizationDialogs/regdialog.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -25,12 +28,14 @@ public:
 private slots:
     void on_enterBtn_clicked();
 
-    void on_showPassword_stateChanged(int arg1);
+    void on_showPassword_stateChanged(int arg1) const;
 
     void on_regBtn_clicked();
 
 private:
     Ui::AuthorizationWin *ui;
+    RegDialog* regDialog;
+    DbWindow* dbWindow;
 };
 
 

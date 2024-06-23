@@ -9,7 +9,7 @@
 
 class MuzMsgBox {
 public:
-    static void createMessageBox(const char* message){
+    static void createMessageBox(const QString& message){
         QMessageBox msgBox;
         msgBox.setText(message);
         msgBox.exec();

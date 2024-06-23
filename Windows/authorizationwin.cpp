@@ -10,23 +10,23 @@
 #include "Hashing.h"
 #include "MuzMsgBox.h"
 #include "dbwindow.h"
-#include "regdialog.h"
+#include "AuthorizationDialogs/regdialog.h"
 
-AuthorizationWin::AuthorizationWin(QWidget *parent) : QMainWindow(parent), ui(new Ui::AuthorizationWin) {
+AuthorizationWin::AuthorizationWin(QWidget *parent) : QMainWindow(parent), ui(new Ui::AuthorizationWin), dbWindow(nullptr), regDialog(nullptr) {
     ui->setupUi(this);
+    setAttribute(Qt::WA_DeleteOnClose);
 }
 
 void AuthorizationWin::on_enterBtn_clicked() {
-    QString login = ui->loginField->text();
-    QString password = ui->passwordField->text();
+    const QString login = ui->loginField->text();
+    const QString password = ui->passwordField->text();
     dbmanager::authorizeUser(login);
     if (CurrentUser::role != Roles::None) {
         std::string hashedPassword = Hashing::hashPassword(password.toStdString(), CurrentUser::salt);
-        std::cout << hashedPassword << std::endl;
         if (hashedPassword == CurrentUser::password) {
-            DbWindow *dbWindow = new DbWindow(this);
-            hide();
+            dbWindow = new DbWindow();
             dbWindow->show();
+            hide();
         } else {
             MuzMsgBox::createMessageBox("Пароль не совпадает!");
         }
@@ -36,17 +36,23 @@ void AuthorizationWin::on_enterBtn_clicked() {
 }
 
 
-void AuthorizationWin::on_showPassword_stateChanged(int arg1) {
+void AuthorizationWin::on_showPassword_stateChanged(const int arg1) const {
+    if (arg1 == Qt::CheckState::Checked){
+        ui->passwordField->setEchoMode(QLineEdit::EchoMode::Normal);
+    } else {
+        ui->passwordField->setEchoMode(QLineEdit::EchoMode::Password);
+    }
 }
 
 
 void AuthorizationWin::on_regBtn_clicked() {
-    RegDialog *reg_dialog = new RegDialog(this);
-    reg_dialog->show();
-    hide();
+    regDialog = new RegDialog(this);
+    regDialog->show();
 }
 
 AuthorizationWin::~AuthorizationWin() {
     dbmanager::closeDatabase();
     delete ui;
+    delete regDialog;
+    delete dbWindow;
 }

@@ -6,6 +6,8 @@
 #define DBWINDOW_H
 
 #include <QMainWindow>
+#include <QAction>
+#include "UsersTableDialogs/createuserdialog.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -20,11 +22,14 @@ public:
     ~DbWindow() override;
 private slots:
         void onActionTriggered();
+        void onAddDataBtnClicked();
+        void onDeleteDataBtnClicked();
 private:
     Ui::DbWindow *ui;
+    CreateUserDialog* createUserDialog;
+    QAction* currentTable;
     QMenu* tabMenu;
     QMenu* addTab(QString tabName);
-
     void addMenuAction(std::vector<QString> array);
 
     std::vector<QString> stAdminTables{"Addresses",
@@ -53,6 +58,18 @@ private:
                                          "Reviews",
                                          "Roles",
                                          "Suppliers"
+
+    };
+
+    std::vector<QString> guestTables{"Addresses",
+                                         "CartItems",
+                                         "Carts",
+                                         "Categories",
+                                         "OrderItems",
+                                         "Orders",
+                                         "Payments",
+                                         "Products",
+                                         "Reviews",
 
     };
 };

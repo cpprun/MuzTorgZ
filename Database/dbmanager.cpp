@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+#include "MuzMsgBox.h"
+
 QSqlDatabase dbmanager::db = QSqlDatabase::addDatabase("QMYSQL");
 
 void dbmanager::connectToDatabase() {
@@ -23,21 +25,39 @@ void dbmanager::closeDatabase() {
     db.close();
 }
 
-void dbmanager::authorizeUser(QString& login){
+void dbmanager::authorizeUser(const QString& login){
     QSqlQuery query;
     QSqlQueryModel* model = new QSqlQueryModel();
     query.prepare("SELECT * FROM Users WHERE username = :login");
     query.bindValue(":login", login);
     if (!query.exec()){
         qDebug() << "Ошибка выполнения запроса: " << query.lastError().text();
+        return;
     }
     model->setQuery(query);
     std::cout << model->index(0, 0).data().toString().toStdString();
-    CurrentUser user;
-    user.login = model->index(0, 1).data().toString().toStdString();
-    user.password = model->index(0, 2).data().toString().toStdString();
-    user.salt = model->index(0, 6).data().toString().toStdString();
-    user.role = Roles(model->index(0, 4).data().toInt());
+    //CurrentUser user;
+    CurrentUser::login = model->index(0, 1).data().toString().toStdString();
+    CurrentUser::password = model->index(0, 2).data().toString().toStdString();
+    CurrentUser::salt = model->index(0, 6).data().toString().toStdString();
+    CurrentUser::role = Roles(model->index(0, 4).data().toInt());
+}
+
+void dbmanager::regUser(const QString &login, const QString &password, const QString &email, Roles role,
+    const QString &salt) {
+    QSqlQuery query;
+    query.prepare("INSERT INTO Users(username, password, email, salt, role_id) VALUES (:login, :password, :email, :salt, :role_id)");
+    query.bindValue(":login", login);
+    query.bindValue(":password", password);
+    query.bindValue(":email", email);
+    query.bindValue(":salt", salt);
+    query.bindValue(":role_id", static_cast<int>(role));
+
+    if (!query.exec()) {
+        MuzMsgBox::createMessageBox("Ошибка регистрации!\n" + query.lastError().text());
+        return;
+    }
+    MuzMsgBox::createMessageBox("Пользователь успешно зарегистрирован!");
 }
 
 QSqlQueryModel* dbmanager::getTablesName(){

@@ -26,9 +26,12 @@ MuzTorgZ_autogen/timestamp: \
   /home/vladislav/Projects/CPP/MuzTorgZ/CMakeLists.txt \
   /home/vladislav/Projects/CPP/MuzTorgZ/Database/dbmanager.cpp \
   /home/vladislav/Projects/CPP/MuzTorgZ/Database/dbmanager.h \
-  /home/vladislav/Projects/CPP/MuzTorgZ/Dialogs/regdialog.cpp \
-  /home/vladislav/Projects/CPP/MuzTorgZ/Dialogs/regdialog.h \
-  /home/vladislav/Projects/CPP/MuzTorgZ/Dialogs/regdialog.ui \
+  /home/vladislav/Projects/CPP/MuzTorgZ/Dialogs/AuthorizationDialogs/regdialog.cpp \
+  /home/vladislav/Projects/CPP/MuzTorgZ/Dialogs/AuthorizationDialogs/regdialog.h \
+  /home/vladislav/Projects/CPP/MuzTorgZ/Dialogs/AuthorizationDialogs/regdialog.ui \
+  /home/vladislav/Projects/CPP/MuzTorgZ/Dialogs/UsersTableDialogs/createuserdialog.cpp \
+  /home/vladislav/Projects/CPP/MuzTorgZ/Dialogs/UsersTableDialogs/createuserdialog.h \
+  /home/vladislav/Projects/CPP/MuzTorgZ/Dialogs/UsersTableDialogs/createuserdialog.ui \
   /home/vladislav/Projects/CPP/MuzTorgZ/Models/CurrentUser.cpp \
   /home/vladislav/Projects/CPP/MuzTorgZ/Models/CurrentUser.h \
   /home/vladislav/Projects/CPP/MuzTorgZ/Models/Roles.h \
@@ -301,6 +304,7 @@ MuzTorgZ_autogen/timestamp: \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h \
@@ -325,6 +329,7 @@ MuzTorgZ_autogen/timestamp: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
@@ -354,6 +359,7 @@ MuzTorgZ_autogen/timestamp: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
@@ -379,8 +385,18 @@ MuzTorgZ_autogen/timestamp: \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/QSqlRelationalTableModel \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqldatabase.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlquerymodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqlrelationaltablemodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qsqltablemodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsql-config.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSql/qtsqlglobal.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAction \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \

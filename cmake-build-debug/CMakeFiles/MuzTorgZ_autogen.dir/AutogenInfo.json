@@ -94,9 +94,15 @@
 			null
 		],
 		[
-			"/home/vladislav/Projects/CPP/MuzTorgZ/Dialogs/regdialog.h",
+			"/home/vladislav/Projects/CPP/MuzTorgZ/Dialogs/AuthorizationDialogs/regdialog.h",
 			"MU",
-			"UADLAD4D23/moc_regdialog.cpp",
+			"2IMZVUHZAV/moc_regdialog.cpp",
+			null
+		],
+		[
+			"/home/vladislav/Projects/CPP/MuzTorgZ/Dialogs/UsersTableDialogs/createuserdialog.h",
+			"MU",
+			"52OIQXTUIH/moc_createuserdialog.cpp",
 			null
 		],
 		[
@@ -199,7 +205,12 @@
 			null
 		],
 		[
-			"/home/vladislav/Projects/CPP/MuzTorgZ/Dialogs/regdialog.cpp",
+			"/home/vladislav/Projects/CPP/MuzTorgZ/Dialogs/AuthorizationDialogs/regdialog.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/Projects/CPP/MuzTorgZ/Dialogs/UsersTableDialogs/createuserdialog.cpp",
 			"MU",
 			null
 		],
