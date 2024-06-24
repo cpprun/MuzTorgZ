@@ -24,6 +24,7 @@ public:
 private slots:
         void onActionTriggered();
         void onAddDataBtnClicked();
+        void onDeleteDataBtnClicked();
         void onSubmitBtnClicked();
 protected:
     void keyPressEvent(QKeyEvent* event) override;
@@ -37,7 +38,7 @@ private:
     QSqlRelationalTableModel* model;
     void addMenuAction(std::vector<QString> array);
     void updateTable();
-    bool isRowEmpty(int row);
+    bool isRowEmpty(const int row) const;
 
     std::vector<QString> stAdminTables{"Addresses",
                                            "CartItems",
@@ -56,25 +57,18 @@ private:
     std::vector<QString> adminTables{"Addresses",
                                          "CartItems",
                                          "Carts",
-                                         "Categories",
                                          "OrderItems",
                                          "Orders",
                                          "Payments",
-                                         "ProductSuppliers",
                                          "Products",
                                          "Reviews",
-                                         "Roles",
-                                         "Suppliers"
 
     };
 
-    std::vector<QString> guestTables{"Addresses",
-                                         "CartItems",
+    std::vector<QString> guestTables{"CartItems",
                                          "Carts",
-                                         "Categories",
                                          "OrderItems",
                                          "Orders",
-                                         "Payments",
                                          "Products",
                                          "Reviews",
 

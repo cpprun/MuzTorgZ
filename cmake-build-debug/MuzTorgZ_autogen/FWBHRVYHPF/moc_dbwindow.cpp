@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_DbWindow_t {
     QByteArrayData data[6];
-    char stringdata0[94];
+    char stringdata0[90];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -36,13 +36,13 @@ QT_MOC_LITERAL(0, 0, 8), // "DbWindow"
 QT_MOC_LITERAL(1, 9, 17), // "onActionTriggered"
 QT_MOC_LITERAL(2, 27, 0), // ""
 QT_MOC_LITERAL(3, 28, 19), // "onAddDataBtnClicked"
-QT_MOC_LITERAL(4, 48, 22), // "onChangeDataBtnClicked"
-QT_MOC_LITERAL(5, 71, 22) // "onDeleteDataBtnClicked"
+QT_MOC_LITERAL(4, 48, 22), // "onDeleteDataBtnClicked"
+QT_MOC_LITERAL(5, 71, 18) // "onSubmitBtnClicked"
 
     },
     "DbWindow\0onActionTriggered\0\0"
-    "onAddDataBtnClicked\0onChangeDataBtnClicked\0"
-    "onDeleteDataBtnClicked"
+    "onAddDataBtnClicked\0onDeleteDataBtnClicked\0"
+    "onSubmitBtnClicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -82,8 +82,8 @@ void DbWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         switch (_id) {
         case 0: _t->onActionTriggered(); break;
         case 1: _t->onAddDataBtnClicked(); break;
-        case 2: _t->onChangeDataBtnClicked(); break;
-        case 3: _t->onDeleteDataBtnClicked(); break;
+        case 2: _t->onDeleteDataBtnClicked(); break;
+        case 3: _t->onSubmitBtnClicked(); break;
         default: ;
         }
     }

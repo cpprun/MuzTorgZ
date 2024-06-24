@@ -21,7 +21,7 @@ DbWindow::DbWindow(QWidget *parent) :
 
     connect(ui->addDataBtn, &QPushButton::clicked, this, &DbWindow::onAddDataBtnClicked);
     connect(ui->submitButton, &QPushButton::clicked, this, &DbWindow::onSubmitBtnClicked);
-    //connect(ui->deleteDataBtn, &QPushButton::clicked, this, &DbWindow::onDeleteDataBtnClicked);
+    connect(ui->deleteDataBtn, &QPushButton::clicked, this, &DbWindow::onDeleteDataBtnClicked);
 
     tabMenu = addTab("Таблицы");
     if (CurrentUser::role == Roles::StAdmin){
@@ -94,12 +94,6 @@ void DbWindow::onActionTriggered() {
 }
 
 void DbWindow::onAddDataBtnClicked() {
-    /*if (currentTable) {
-        if (currentTable->text() == "Users") {
-            createUserDialog = new CreateUserDialog(this);
-            createUserDialog->show();
-        }
-    }*/
     if (currentTable) {
         if (!addBtnMode) {
             int rowCount = model->rowCount();
@@ -117,7 +111,20 @@ void DbWindow::onAddDataBtnClicked() {
     }
 }
 
-bool DbWindow::isRowEmpty(int row) {
+void DbWindow::onDeleteDataBtnClicked() {
+    if (currentTable) {
+        if(ui->tableView->selectionModel()->hasSelection()) {
+            ui->tableView->model()->removeRow(ui->tableView->currentIndex().row());
+            if(!ui->tableView->model()->submit()) {
+                MuzMsgBox::createMessageBox("Ошибка SQL", model->lastError().text());
+            } else {
+                updateTable();
+            }
+        }
+    }
+}
+
+bool DbWindow::isRowEmpty(const int row) const {
     QSqlRecord record = model->record(row);
     for (int col = 0; col < record.count(); ++col) {
         QVariant value = record.value(col);
@@ -129,10 +136,16 @@ bool DbWindow::isRowEmpty(int row) {
 }
 
 void DbWindow::onSubmitBtnClicked() {
-    if(isRowEmpty(model->rowCount() - 1)) {
-        MuzMsgBox::createMessageBox("Ошибка", "Заполните все поля!");
-    } else {
-        model->submit();
+    if (currentTable) {
+        if(isRowEmpty(model->rowCount() - 1)) {
+            MuzMsgBox::createMessageBox("Ошибка", "Заполните все поля!");
+        } else {
+            if(!ui->tableView->model()->submit()) {
+                MuzMsgBox::createMessageBox("Ошибка SQL", model->lastError().text());
+            } else {
+                updateTable();
+            }
+        }
     }
 }
 
@@ -150,6 +163,7 @@ void DbWindow::addMenuAction(std::vector<QString> array){
 }
 
 void DbWindow::updateTable() {
+    model->select();
     ui->tableView->setModel(model);
 }
 
@@ -158,6 +172,8 @@ void DbWindow::keyPressEvent(QKeyEvent *event) {
     {
         if(ui->tableView->selectionModel()->hasSelection()) {
             ui->tableView->model()->removeRow(ui->tableView->currentIndex().row());
+            ui->tableView->model()->submit();
+            updateTable();
         }
     }
 }
