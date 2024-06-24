@@ -6,24 +6,26 @@
 
 #include "dbwindow.h"
 
+#include <QSqlRecord>
+
 #include "CurrentUser.h"
 #include "dbmanager.h"
+#include "MuzMsgBox.h"
 #include "ui_dbwindow.h"
 
 DbWindow::DbWindow(QWidget *parent) :
-    QMainWindow(parent), ui(new Ui::DbWindow), createUserDialog(nullptr), currentTable(nullptr) {
+    QMainWindow(parent), ui(new Ui::DbWindow), createUserDialog(nullptr), currentTable(nullptr), model(nullptr) {
     ui->setupUi(this);
     setAttribute(Qt::WA_DeleteOnClose);
     setWindowTitle("База данных");
 
     connect(ui->addDataBtn, &QPushButton::clicked, this, &DbWindow::onAddDataBtnClicked);
-    connect(ui->changeDataBtn, &QPushButton::clicked, this, &DbWindow::onChangeDataBtnClicked);
-    connect(ui->deleteDataBtn, &QPushButton::clicked, this, &DbWindow::onDeleteDataBtnClicked);
+    connect(ui->submitButton, &QPushButton::clicked, this, &DbWindow::onSubmitBtnClicked);
+    //connect(ui->deleteDataBtn, &QPushButton::clicked, this, &DbWindow::onDeleteDataBtnClicked);
 
     tabMenu = addTab("Таблицы");
     if (CurrentUser::role == Roles::StAdmin){
         addMenuAction(stAdminTables);
-
     } else if (CurrentUser::role == Roles::Admin){
         addMenuAction(adminTables);
     } else if (CurrentUser::role == Roles::Guest) {
@@ -35,59 +37,103 @@ void DbWindow::onActionTriggered() {
     currentTable = qobject_cast<QAction*>(sender());
     if (currentTable){
         if (currentTable->text() == "Users"){
-            ui->tableView->setModel(dbmanager::getUsersTable());
+            model = dbmanager::getUsersTable();
+            ui->tableView->setModel(model);
             ui->tableView->setItemDelegateForColumn(4, new QSqlRelationalDelegate(ui->tableView));
         } else if (currentTable->text() == "Suppliers"){
-            ui->tableView->setModel(dbmanager::getSuppliersTable());
+            model = dbmanager::getSuppliersTable();
+            ui->tableView->setModel(model);
         } else if (currentTable->text() == "Roles"){
-            ui->tableView->setModel(dbmanager::getRolesTable());
+            model = dbmanager::getRolesTable();
+            ui->tableView->setModel(model);
         } else if (currentTable->text() == "Reviews"){
-            ui->tableView->setModel(dbmanager::getReviewsTable());
+            model = dbmanager::getReviewsTable();
+            ui->tableView->setModel(model);
             ui->tableView->setItemDelegateForColumn(1, new QSqlRelationalDelegate(ui->tableView));
             ui->tableView->setItemDelegateForColumn(2, new QSqlRelationalDelegate(ui->tableView));
         } else if (currentTable->text() == "Products"){
-            ui->tableView->setModel(dbmanager::getProductsTable());
+            model = dbmanager::getProductsTable();
+            ui->tableView->setModel(model);
             ui->tableView->setItemDelegateForColumn(5, new QSqlRelationalDelegate(ui->tableView));
         } else if (currentTable->text() == "ProductSuppliers"){
-            ui->tableView->setModel(dbmanager::getProductSuppliersTable());
+            model = dbmanager::getProductSuppliersTable();
+            ui->tableView->setModel(model);
             ui->tableView->setItemDelegateForColumn(0, new QSqlRelationalDelegate(ui->tableView));
             ui->tableView->setItemDelegateForColumn(1, new QSqlRelationalDelegate(ui->tableView));
         } else if (currentTable->text() == "Payments"){
-            ui->tableView->setModel(dbmanager::getPaymentsTable());
+            model = dbmanager::getPaymentsTable();
+            ui->tableView->setModel(model);
             ui->tableView->setItemDelegateForColumn(1, new QSqlRelationalDelegate(ui->tableView));
         } else if (currentTable->text() == "Orders"){
-            ui->tableView->setModel(dbmanager::getOrdersTable());
+            model = dbmanager::getOrdersTable();
+            ui->tableView->setModel(model);
             ui->tableView->setItemDelegateForColumn(1, new QSqlRelationalDelegate(ui->tableView));
         } else if (currentTable->text() == "OrderItems"){
-            ui->tableView->setModel(dbmanager::getOrderItemsTable());
+            model = dbmanager::getOrderItemsTable();
+            ui->tableView->setModel(model);
             ui->tableView->setItemDelegateForColumn(1, new QSqlRelationalDelegate(ui->tableView));
             ui->tableView->setItemDelegateForColumn(2, new QSqlRelationalDelegate(ui->tableView));
         } else if (currentTable->text() == "Categories"){
-            ui->tableView->setModel(dbmanager::getCategoriesTable());
+            model = dbmanager::getCategoriesTable();
+            ui->tableView->setModel(model);
         } else if (currentTable->text() == "Carts"){
-            ui->tableView->setModel(dbmanager::getCartsTable());
+            model = dbmanager::getCartsTable();
+            ui->tableView->setModel(model);
             ui->tableView->setItemDelegateForColumn(1, new QSqlRelationalDelegate(ui->tableView));
         } else if (currentTable->text() == "CartItems"){
-            ui->tableView->setModel(dbmanager::getCartItemsTable());
+            model = dbmanager::getCartItemsTable();
+            ui->tableView->setModel(model);
             ui->tableView->setItemDelegateForColumn(1, new QSqlRelationalDelegate(ui->tableView));
             ui->tableView->setItemDelegateForColumn(2, new QSqlRelationalDelegate(ui->tableView));
         } else if (currentTable->text() == "Addresses"){
-            ui->tableView->setModel(dbmanager::getAddressesTable());
+            model = dbmanager::getAddressesTable();
+            ui->tableView->setModel(model);
             ui->tableView->setItemDelegateForColumn(1, new QSqlRelationalDelegate(ui->tableView));
         }
     }
 }
 
 void DbWindow::onAddDataBtnClicked() {
-    if (currentTable) {
+    /*if (currentTable) {
         if (currentTable->text() == "Users") {
             createUserDialog = new CreateUserDialog(this);
             createUserDialog->show();
         }
+    }*/
+    if (currentTable) {
+        if (!addBtnMode) {
+            int rowCount = model->rowCount();
+            model->insertRow(rowCount);
+            QModelIndex index = model->index(rowCount, 0);
+            ui->tableView->setCurrentIndex(index);
+            ui->tableView->edit(index);
+            ui->addDataBtn->setText("Отменить");
+            addBtnMode = true;
+        } else if (addBtnMode) {
+            ui->addDataBtn->setText("Добавить");
+            model->removeRow(model->rowCount() - 1);
+            addBtnMode = false;
+        }
     }
 }
 
-void DbWindow::onDeleteDataBtnClicked() {
+bool DbWindow::isRowEmpty(int row) {
+    QSqlRecord record = model->record(row);
+    for (int col = 0; col < record.count(); ++col) {
+        QVariant value = record.value(col);
+        if (value.isNull() && value.toString().trimmed().isEmpty()) {
+            return true; // Нашли непустое значение
+        }
+    }
+    return false;
+}
+
+void DbWindow::onSubmitBtnClicked() {
+    if(isRowEmpty(model->rowCount() - 1)) {
+        MuzMsgBox::createMessageBox("Ошибка", "Заполните все поля!");
+    } else {
+        model->submit();
+    }
 }
 
 
@@ -97,9 +143,22 @@ QMenu* DbWindow::addTab(QString tabName){
 
 void DbWindow::addMenuAction(std::vector<QString> array){
     tabMenu->clear();
-    for (size_t x = 0; x < array.size(); x++){
-        QAction* action = tabMenu->addAction(array.at(x));
+    for (const auto & x : array){
+        QAction* action = tabMenu->addAction(x);
         connect(action, &QAction::triggered, this, &DbWindow::onActionTriggered);
+    }
+}
+
+void DbWindow::updateTable() {
+    ui->tableView->setModel(model);
+}
+
+void DbWindow::keyPressEvent(QKeyEvent *event) {
+    if( event->key() == Qt::Key_Delete )
+    {
+        if(ui->tableView->selectionModel()->hasSelection()) {
+            ui->tableView->model()->removeRow(ui->tableView->currentIndex().row());
+        }
     }
 }
 
@@ -108,4 +167,5 @@ DbWindow::~DbWindow() {
     delete currentTable;
     delete tabMenu;
     delete createUserDialog;
+    delete model;
 }

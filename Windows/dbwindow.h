@@ -7,6 +7,7 @@
 
 #include <QMainWindow>
 #include <QAction>
+#include <QKeyEvent>
 #include "UsersTableDialogs/createuserdialog.h"
 
 
@@ -23,14 +24,20 @@ public:
 private slots:
         void onActionTriggered();
         void onAddDataBtnClicked();
-        void onDeleteDataBtnClicked();
+        void onSubmitBtnClicked();
+protected:
+    void keyPressEvent(QKeyEvent* event) override;
 private:
+    bool addBtnMode = false;
     Ui::DbWindow *ui;
     CreateUserDialog* createUserDialog;
     QAction* currentTable;
     QMenu* tabMenu;
     QMenu* addTab(QString tabName);
+    QSqlRelationalTableModel* model;
     void addMenuAction(std::vector<QString> array);
+    void updateTable();
+    bool isRowEmpty(int row);
 
     std::vector<QString> stAdminTables{"Addresses",
                                            "CartItems",
@@ -73,6 +80,7 @@ private:
 
     };
 };
+
 
 
 #endif //DBWINDOW_H

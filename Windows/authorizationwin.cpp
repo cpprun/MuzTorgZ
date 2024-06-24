@@ -14,7 +14,8 @@
 
 AuthorizationWin::AuthorizationWin(QWidget *parent) : QMainWindow(parent), ui(new Ui::AuthorizationWin), dbWindow(nullptr), regDialog(nullptr) {
     ui->setupUi(this);
-    setAttribute(Qt::WA_DeleteOnClose);
+    ui->loginField->setFocusPolicy(Qt::ClickFocus);
+    ui->passwordField->setFocusPolicy(Qt::ClickFocus);
 }
 
 void AuthorizationWin::on_enterBtn_clicked() {
@@ -28,10 +29,10 @@ void AuthorizationWin::on_enterBtn_clicked() {
             dbWindow->show();
             hide();
         } else {
-            MuzMsgBox::createMessageBox("Пароль не совпадает!");
+            MuzMsgBox::createMessageBox("Ошибка", "Пароль не совпадает!");
         }
     } else {
-        MuzMsgBox::createMessageBox("Пользователь не найден!");
+        MuzMsgBox::createMessageBox("Ошибка", "Пользователь не найден!");
     }
 }
 
@@ -55,4 +56,10 @@ AuthorizationWin::~AuthorizationWin() {
     delete ui;
     delete regDialog;
     delete dbWindow;
+}
+
+void AuthorizationWin::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Delete) {
+        on_enterBtn_clicked();
+    }
 }

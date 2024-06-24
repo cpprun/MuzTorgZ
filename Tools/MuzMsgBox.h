@@ -9,8 +9,9 @@
 
 class MuzMsgBox {
 public:
-    static void createMessageBox(const QString& message){
+    static void createMessageBox(const QString& title, const QString& message){
         QMessageBox msgBox;
+        msgBox.setWindowTitle(title);
         msgBox.setText(message);
         msgBox.exec();
     }

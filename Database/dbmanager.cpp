@@ -54,10 +54,10 @@ void dbmanager::regUser(const QString &login, const QString &password, const QSt
     query.bindValue(":role_id", static_cast<int>(role));
 
     if (!query.exec()) {
-        MuzMsgBox::createMessageBox("Ошибка регистрации!\n" + query.lastError().text());
+        MuzMsgBox::createMessageBox("Ошибка SQL","Ошибка регистрации!\n" + query.lastError().text());
         return;
     }
-    MuzMsgBox::createMessageBox("Пользователь успешно зарегистрирован!");
+    MuzMsgBox::createMessageBox("Ошибка SQL", "Пользователь успешно зарегистрирован!");
 }
 
 QSqlQueryModel* dbmanager::getTablesName(){

@@ -27,10 +27,10 @@ class Ui_DbWindow
 public:
     QWidget *centralwidget;
     QGridLayout *gridLayout;
-    QPushButton *changeDataBtn;
-    QTableView *tableView;
-    QPushButton *addDataBtn;
     QPushButton *deleteDataBtn;
+    QPushButton *addDataBtn;
+    QTableView *tableView;
+    QPushButton *submitButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -43,25 +43,25 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout = new QGridLayout(centralwidget);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        changeDataBtn = new QPushButton(centralwidget);
-        changeDataBtn->setObjectName(QString::fromUtf8("changeDataBtn"));
+        deleteDataBtn = new QPushButton(centralwidget);
+        deleteDataBtn->setObjectName(QString::fromUtf8("deleteDataBtn"));
 
-        gridLayout->addWidget(changeDataBtn, 2, 0, 1, 1);
-
-        tableView = new QTableView(centralwidget);
-        tableView->setObjectName(QString::fromUtf8("tableView"));
-
-        gridLayout->addWidget(tableView, 0, 0, 1, 1);
+        gridLayout->addWidget(deleteDataBtn, 3, 0, 1, 1);
 
         addDataBtn = new QPushButton(centralwidget);
         addDataBtn->setObjectName(QString::fromUtf8("addDataBtn"));
 
         gridLayout->addWidget(addDataBtn, 1, 0, 1, 1);
 
-        deleteDataBtn = new QPushButton(centralwidget);
-        deleteDataBtn->setObjectName(QString::fromUtf8("deleteDataBtn"));
+        tableView = new QTableView(centralwidget);
+        tableView->setObjectName(QString::fromUtf8("tableView"));
 
-        gridLayout->addWidget(deleteDataBtn, 3, 0, 1, 1);
+        gridLayout->addWidget(tableView, 0, 0, 1, 1);
+
+        submitButton = new QPushButton(centralwidget);
+        submitButton->setObjectName(QString::fromUtf8("submitButton"));
+
+        gridLayout->addWidget(submitButton, 2, 0, 1, 1);
 
         DbWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(DbWindow);
@@ -80,9 +80,9 @@ public:
     void retranslateUi(QMainWindow *DbWindow)
     {
         DbWindow->setWindowTitle(QCoreApplication::translate("DbWindow", "DbWindow", nullptr));
-        changeDataBtn->setText(QCoreApplication::translate("DbWindow", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", nullptr));
-        addDataBtn->setText(QCoreApplication::translate("DbWindow", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", nullptr));
         deleteDataBtn->setText(QCoreApplication::translate("DbWindow", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214", nullptr));
+        addDataBtn->setText(QCoreApplication::translate("DbWindow", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", nullptr));
+        submitButton->setText(QCoreApplication::translate("DbWindow", "\320\237\320\276\320\264\321\202\320\262\320\265\321\200\320\264\320\270\321\202\321\214 \320\264\320\276\320\261\320\260\320\262\320\273\320\265\320\275\320\270\320\265", nullptr));
     } // retranslateUi
 
 };

@@ -34,7 +34,7 @@ void CreateUserDialog::onAddBtnClicked() {
     QString password = ui->passwordField->text();
     QString email = ui->emailField->text();
     if (login.isEmpty() || password.isEmpty() || email.isEmpty()) {
-        MuzMsgBox::createMessageBox("Поля не должны быть пустыми!");
+        MuzMsgBox::createMessageBox("Ошибка", "Поля не должны быть пустыми!");
     } else {
         const QString salt = QString::fromStdString(Hashing::generateSalt(16));
         const QString hashedPassword = QString::fromStdString(Hashing::hashPassword(password.toStdString(), salt.toStdString()));

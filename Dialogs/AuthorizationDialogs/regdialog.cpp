@@ -28,7 +28,7 @@ void RegDialog::onRegBtnClicked() {
     QString password = ui->passwordField->text();
     QString email = ui->emailField->text();
     if (login.isEmpty() || password.isEmpty() || email.isEmpty()) {
-        MuzMsgBox::createMessageBox("Поля не должны быть пустыми!");
+        MuzMsgBox::createMessageBox("Ошибка", "Поля не должны быть пустыми!");
         return;
     }
     QString salt = QString::fromStdString(Hashing::generateSalt(16));

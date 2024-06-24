@@ -5,12 +5,9 @@
 #ifndef AUTHORIZATIONWIN_H
 #define AUTHORIZATIONWIN_H
 
-#include <QMainWindow>
 #include <iostream>
 #include <QString>
-
 #include "dbwindow.h"
-#include "../Models/CurrentUser.h"
 #include "AuthorizationDialogs/regdialog.h"
 
 
@@ -24,7 +21,8 @@ Q_OBJECT
 public:
     explicit AuthorizationWin(QWidget *parent = nullptr);
     ~AuthorizationWin() override;
-
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
 private slots:
     void on_enterBtn_clicked();
 
