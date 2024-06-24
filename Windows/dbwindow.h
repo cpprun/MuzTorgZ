@@ -8,7 +8,7 @@
 #include <QMainWindow>
 #include <QAction>
 #include <QKeyEvent>
-#include "UsersTableDialogs/createuserdialog.h"
+#include <QSqlRelationalTableModel>
 
 
 QT_BEGIN_NAMESPACE
@@ -31,7 +31,6 @@ protected:
 private:
     bool addBtnMode = false;
     Ui::DbWindow *ui;
-    CreateUserDialog* createUserDialog;
     QAction* currentTable;
     QMenu* tabMenu;
     QMenu* addTab(QString tabName);

@@ -113,14 +113,6 @@ build CMakeFiles/MuzTorgZ.dir/Dialogs/AuthorizationDialogs/regdialog.cpp.o: CXX_
   OBJECT_DIR = CMakeFiles/MuzTorgZ.dir
   OBJECT_FILE_DIR = CMakeFiles/MuzTorgZ.dir/Dialogs/AuthorizationDialogs
 
-build CMakeFiles/MuzTorgZ.dir/Dialogs/UsersTableDialogs/createuserdialog.cpp.o: CXX_COMPILER__MuzTorgZ_unscanned_Debug /home/vladislav/Projects/CPP/MuzTorgZ/Dialogs/UsersTableDialogs/createuserdialog.cpp || cmake_object_order_depends_target_MuzTorgZ
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/MuzTorgZ.dir/Dialogs/UsersTableDialogs/createuserdialog.cpp.o.d
-  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -fPIC
-  INCLUDES = -I/home/vladislav/Projects/CPP/MuzTorgZ/Windows -I/home/vladislav/Projects/CPP/MuzTorgZ/Models -I/home/vladislav/Projects/CPP/MuzTorgZ/Database -I/home/vladislav/Projects/CPP/MuzTorgZ/Tools -I/home/vladislav/Projects/CPP/MuzTorgZ/Dialogs -isystem /home/vladislav/Projects/CPP/MuzTorgZ/cmake-build-debug/MuzTorgZ_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtSql
-  OBJECT_DIR = CMakeFiles/MuzTorgZ.dir
-  OBJECT_FILE_DIR = CMakeFiles/MuzTorgZ.dir/Dialogs/UsersTableDialogs
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target MuzTorgZ
@@ -129,7 +121,7 @@ build CMakeFiles/MuzTorgZ.dir/Dialogs/UsersTableDialogs/createuserdialog.cpp.o: 
 #############################################
 # Link the executable MuzTorgZ
 
-build MuzTorgZ: CXX_EXECUTABLE_LINKER__MuzTorgZ_Debug CMakeFiles/MuzTorgZ.dir/MuzTorgZ_autogen/mocs_compilation.cpp.o CMakeFiles/MuzTorgZ.dir/main.cpp.o CMakeFiles/MuzTorgZ.dir/Windows/authorizationwin.cpp.o CMakeFiles/MuzTorgZ.dir/Database/dbmanager.cpp.o CMakeFiles/MuzTorgZ.dir/Models/CurrentUser.cpp.o CMakeFiles/MuzTorgZ.dir/Tools/Hashing.cpp.o CMakeFiles/MuzTorgZ.dir/Windows/dbwindow.cpp.o CMakeFiles/MuzTorgZ.dir/Dialogs/AuthorizationDialogs/regdialog.cpp.o CMakeFiles/MuzTorgZ.dir/Dialogs/UsersTableDialogs/createuserdialog.cpp.o | /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3 /usr/lib/x86_64-linux-gnu/libQt5Sql.so.5.15.3 /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3 || MuzTorgZ_autogen MuzTorgZ_autogen_timestamp_deps
+build MuzTorgZ: CXX_EXECUTABLE_LINKER__MuzTorgZ_Debug CMakeFiles/MuzTorgZ.dir/MuzTorgZ_autogen/mocs_compilation.cpp.o CMakeFiles/MuzTorgZ.dir/main.cpp.o CMakeFiles/MuzTorgZ.dir/Windows/authorizationwin.cpp.o CMakeFiles/MuzTorgZ.dir/Database/dbmanager.cpp.o CMakeFiles/MuzTorgZ.dir/Models/CurrentUser.cpp.o CMakeFiles/MuzTorgZ.dir/Tools/Hashing.cpp.o CMakeFiles/MuzTorgZ.dir/Windows/dbwindow.cpp.o CMakeFiles/MuzTorgZ.dir/Dialogs/AuthorizationDialogs/regdialog.cpp.o | /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3 /usr/lib/x86_64-linux-gnu/libQt5Sql.so.5.15.3 /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3 || MuzTorgZ_autogen MuzTorgZ_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3  /usr/lib/x86_64-linux-gnu/libQt5Sql.so.5.15.3  /usr/lib/x86_64-linux-gnu/libssl.so  /usr/lib/x86_64-linux-gnu/libcrypto.so  /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3  /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3
   OBJECT_DIR = CMakeFiles/MuzTorgZ.dir
@@ -171,7 +163,7 @@ build MuzTorgZ_autogen_timestamp_deps: phony CMakeFiles/MuzTorgZ_autogen_timesta
 #############################################
 # Utility command for MuzTorgZ_autogen
 
-build MuzTorgZ_autogen: phony CMakeFiles/MuzTorgZ_autogen MuzTorgZ_autogen/include/Windows/ui_authorizationwin.h MuzTorgZ_autogen/include/Windows/ui_dbwindow.h MuzTorgZ_autogen/include/Dialogs/AuthorizationDialogs/ui_regdialog.h MuzTorgZ_autogen/include/Dialogs/UsersTableDialogs/ui_createuserdialog.h MuzTorgZ_autogen/timestamp MuzTorgZ_autogen/mocs_compilation.cpp MuzTorgZ_autogen_timestamp_deps
+build MuzTorgZ_autogen: phony CMakeFiles/MuzTorgZ_autogen MuzTorgZ_autogen/include/Windows/ui_authorizationwin.h MuzTorgZ_autogen/include/Windows/ui_dbwindow.h MuzTorgZ_autogen/include/Dialogs/AuthorizationDialogs/ui_regdialog.h MuzTorgZ_autogen/timestamp MuzTorgZ_autogen/mocs_compilation.cpp MuzTorgZ_autogen_timestamp_deps
 
 
 #############################################
@@ -187,13 +179,13 @@ build MuzTorgZ_autogen/timestamp MuzTorgZ_autogen/mocs_compilation.cpp | ${cmake
 #############################################
 # Phony custom command for CMakeFiles/MuzTorgZ_autogen_timestamp_deps
 
-build CMakeFiles/MuzTorgZ_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/MuzTorgZ_autogen_timestamp_deps: phony /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3 /usr/lib/qt5/bin/moc /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3 /usr/lib/x86_64-linux-gnu/libQt5Sql.so.5.15.3 /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3 /usr/lib/qt5/bin/uic
+build CMakeFiles/MuzTorgZ_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/MuzTorgZ_autogen_timestamp_deps: phony /usr/lib/x86_64-linux-gnu/libQt5Sql.so.5.15.3 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3 /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3 /usr/lib/qt5/bin/moc /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3 /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so /usr/lib/qt5/bin/uic
 
 
 #############################################
 # Phony custom command for CMakeFiles/MuzTorgZ_autogen
 
-build CMakeFiles/MuzTorgZ_autogen MuzTorgZ_autogen/include/Windows/ui_authorizationwin.h MuzTorgZ_autogen/include/Windows/ui_dbwindow.h MuzTorgZ_autogen/include/Dialogs/AuthorizationDialogs/ui_regdialog.h MuzTorgZ_autogen/include/Dialogs/UsersTableDialogs/ui_createuserdialog.h | ${cmake_ninja_workdir}CMakeFiles/MuzTorgZ_autogen ${cmake_ninja_workdir}MuzTorgZ_autogen/include/Windows/ui_authorizationwin.h ${cmake_ninja_workdir}MuzTorgZ_autogen/include/Windows/ui_dbwindow.h ${cmake_ninja_workdir}MuzTorgZ_autogen/include/Dialogs/AuthorizationDialogs/ui_regdialog.h ${cmake_ninja_workdir}MuzTorgZ_autogen/include/Dialogs/UsersTableDialogs/ui_createuserdialog.h: phony MuzTorgZ_autogen/timestamp || MuzTorgZ_autogen_timestamp_deps
+build CMakeFiles/MuzTorgZ_autogen MuzTorgZ_autogen/include/Windows/ui_authorizationwin.h MuzTorgZ_autogen/include/Windows/ui_dbwindow.h MuzTorgZ_autogen/include/Dialogs/AuthorizationDialogs/ui_regdialog.h | ${cmake_ninja_workdir}CMakeFiles/MuzTorgZ_autogen ${cmake_ninja_workdir}MuzTorgZ_autogen/include/Windows/ui_authorizationwin.h ${cmake_ninja_workdir}MuzTorgZ_autogen/include/Windows/ui_dbwindow.h ${cmake_ninja_workdir}MuzTorgZ_autogen/include/Dialogs/AuthorizationDialogs/ui_regdialog.h: phony MuzTorgZ_autogen/timestamp || MuzTorgZ_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

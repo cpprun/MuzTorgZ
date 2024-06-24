@@ -14,7 +14,7 @@
 #include "ui_dbwindow.h"
 
 DbWindow::DbWindow(QWidget *parent) :
-    QMainWindow(parent), ui(new Ui::DbWindow), createUserDialog(nullptr), currentTable(nullptr), model(nullptr) {
+    QMainWindow(parent), ui(new Ui::DbWindow), currentTable(nullptr), model(nullptr) {
     ui->setupUi(this);
     setAttribute(Qt::WA_DeleteOnClose);
     setWindowTitle("База данных");
@@ -184,6 +184,5 @@ DbWindow::~DbWindow() {
     delete ui;
     delete currentTable;
     delete tabMenu;
-    delete createUserDialog;
     delete model;
 }

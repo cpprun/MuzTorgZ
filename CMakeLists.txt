@@ -34,9 +34,6 @@ add_executable(MuzTorgZ main.cpp
         Dialogs/AuthorizationDialogs/regdialog.cpp
         Dialogs/AuthorizationDialogs/regdialog.h
         Dialogs/AuthorizationDialogs/regdialog.ui
-        Dialogs/UsersTableDialogs/createuserdialog.cpp
-        Dialogs/UsersTableDialogs/createuserdialog.h
-        Dialogs/UsersTableDialogs/createuserdialog.ui
 )
 
 
