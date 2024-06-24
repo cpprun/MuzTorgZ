@@ -34,6 +34,8 @@ DbWindow::DbWindow(QWidget *parent) :
 }
 
 void DbWindow::onActionTriggered() {
+    ui->addDataBtn->setText("Добавить");
+    addBtnMode = false;
     currentTable = qobject_cast<QAction*>(sender());
     if (currentTable){
         if (currentTable->text() == "Users"){

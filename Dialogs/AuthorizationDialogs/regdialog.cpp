@@ -33,11 +33,11 @@ void RegDialog::onRegBtnClicked() {
     }
     QString salt = QString::fromStdString(Hashing::generateSalt(16));
     QString hashedPassword = QString::fromStdString(Hashing::hashPassword(password.toStdString(), salt.toStdString()));
-    dbmanager::regUser(login, hashedPassword, email, Roles::Guest, salt);
+    if(dbmanager::regUser(login, hashedPassword, email, Roles::Guest, salt)) {
+        hide();
+    }
 
-    AuthorizationWin* authorization_win = new AuthorizationWin(this);
-    authorization_win->show();
-    hide();
+
 }
 
 RegDialog::~RegDialog() {

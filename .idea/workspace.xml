@@ -22,17 +22,19 @@
   <component name="ChangeListManager">
     <list default="true" id="ea15386e-f23c-4466-b4e7-4923310b2773" name="Changes" comment="upd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/dbmanager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Database/dbmanager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/dbmanager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Database/dbmanager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dialogs/AuthorizationDialogs/regdialog.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Dialogs/AuthorizationDialogs/regdialog.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Windows/dbwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Windows/dbwindow.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Windows/dbwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/Windows/dbwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/Database/dbmanager.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/Database/dbmanager.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/MuzTorgZ_autogen/mocs_compilation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/MuzTorgZ_autogen/mocs_compilation.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/Windows/authorizationwin.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/Windows/authorizationwin.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/Windows/dbwindow.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/Windows/dbwindow.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ_autogen.dir/ParseCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MuzTorgZ_autogen.dir/ParseCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/d/6b3c4ae86290a95a140e53bcb311e092a166e15438c8cdfd5d2c2e60a7157219.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/d/6b3c4ae86290a95a140e53bcb311e092a166e15438c8cdfd5d2c2e60a7157219.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ_autogen/FWBHRVYHPF/moc_dbwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ_autogen/FWBHRVYHPF/moc_dbwindow.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ_autogen/deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ_autogen/deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/MuzTorgZ" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +143,7 @@
       <workItem from="1719009457025" duration="13534000" />
       <workItem from="1719090735341" duration="7821000" />
       <workItem from="1719154565923" duration="12080000" />
-      <workItem from="1719231660431" duration="435000" />
+      <workItem from="1719231660431" duration="2212000" />
     </task>
     <task id="LOCAL-00001" summary="upd">
       <option name="closed" value="true" />
@@ -175,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719194351234</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="upd">
+      <option name="closed" value="true" />
+      <created>1719232218807</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719232218807</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

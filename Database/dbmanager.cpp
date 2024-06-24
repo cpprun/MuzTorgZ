@@ -43,8 +43,8 @@ void dbmanager::authorizeUser(const QString& login){
     CurrentUser::role = Roles(model->index(0, 4).data().toInt());
 }
 
-void dbmanager::regUser(const QString &login, const QString &password, const QString &email, Roles role,
-    const QString &salt) {
+bool dbmanager::regUser(const QString &login, const QString &password, const QString &email, Roles role,
+                        const QString &salt) {
     QSqlQuery query;
     query.prepare("INSERT INTO Users(username, password, email, salt, role_id) VALUES (:login, :password, :email, :salt, :role_id)");
     query.bindValue(":login", login);
@@ -55,9 +55,10 @@ void dbmanager::regUser(const QString &login, const QString &password, const QSt
 
     if (!query.exec()) {
         MuzMsgBox::createMessageBox("Ошибка SQL","Ошибка регистрации!\n" + query.lastError().text());
-        return;
+        return false;
     }
     MuzMsgBox::createMessageBox("Ошибка SQL", "Пользователь успешно зарегистрирован!");
+    return true;
 }
 
 QSqlQueryModel* dbmanager::getTablesName(){
